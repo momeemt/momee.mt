@@ -28,6 +28,8 @@
               easy-ps.spago
               easy-ps.purescript-language-server
               easy-ps.purs-tidy
+              dhall
+              dhall-lsp-server
               nodejs_22
             ]
             ++ lib.optional stdenv.isDarwin [
