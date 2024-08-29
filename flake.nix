@@ -31,6 +31,7 @@
               dhall
               dhall-lsp-server
               nodejs_22
+              esbuild
             ]
             ++ lib.optional stdenv.isDarwin [
               frameworks.Security

@@ -2,4 +2,4 @@
 .direnv
 output
 .spago
-
+.psc-ide-port
