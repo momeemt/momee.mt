@@ -32,6 +32,7 @@
               dhall-lsp-server
               nodejs_22
               esbuild
+              tailwindcss
             ]
             ++ lib.optional stdenv.isDarwin [
               frameworks.Security
