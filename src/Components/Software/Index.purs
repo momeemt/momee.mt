@@ -1,7 +1,8 @@
-module Index where
+module Software where
 
 import Prelude
 
+import ExternalLink (external_link)
 import Jelly.Component (Component, text)
 import Jelly.Element as JE
 import Jelly.Prop ((:=))
@@ -24,22 +25,21 @@ software = do
       unit_lib
       mifton
 
-software_li :: forall m. String -> Component m -> Component m
-software_li name comp = do
+software_li :: forall m. String -> Boolean -> Component m -> Component m
+software_li name archived comp = do
   JE.li ["class" := "mt-1"] do
     JE.details [] do
       JE.summary ["class" := "cursor-pointer select-none list-none"] do
-        text name 
+        text name
+        JE.span ["class" := "ml-2 text-slate-400 text-sm"] do
+          if archived then
+            text "Archived"
+          else text ""
       comp
-
-external_link :: forall m. String -> Component m -> Component m
-external_link href children = do
-  JE.a ["class" := "underline", "href" := href, "target" := "_blank", "rel" := "noopener noreferrer"] do
-    children
 
 wascaml :: forall m. Component m
 wascaml = do
-  software_li "wascaml (2024/05 - 08)" do
+  software_li "wascaml (2024/05 - 08)" false do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "OCaml, WebAssembly, Python"
@@ -52,10 +52,10 @@ wascaml = do
 
 portfolio :: forall m. Component m
 portfolio = do
-  software_li "momee.mt (2024/08)" do
+  software_li "momee.mt (2024/08)" false do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
-        text "PureScript, Jelly, Tailwind"
+        text "PureScript, Jelly 🍮, Tailwind"
       JE.li [] do
         text "GitHub: "
         external_link "https://github.com/momeemt/momee.mt" do
@@ -63,7 +63,7 @@ portfolio = do
 
 brack :: forall m. Component m
 brack = do
-  software_li "Brack (2022/08 - 現在)" do
+  software_li "Brack (2022/08 - 現在)" false do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "Rust, WebAssembly"
@@ -79,7 +79,7 @@ brack = do
 
 sohosai :: forall m. Component m
 sohosai = do
-  software_li "Sohosai (2022/06 - 2023/10)" do
+  software_li "Sohosai (2022/06 - 2023/10)" false do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "Rust, Nix, Terraform, Sakura Cloud, Auth0, Roundcube"
@@ -99,7 +99,7 @@ sohosai = do
 
 mock_up :: forall m. Component m
 mock_up = do
-  software_li "mock up (2021/03 - 2023/12)" do
+  software_li "mock up (2021/03 - 2023/12)" true do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "Nim, FFmpeg, OpenGL, HLS, nginx"
@@ -112,7 +112,7 @@ mock_up = do
 
 ffmpeg_nim :: forall m. Component m
 ffmpeg_nim = do
-  software_li "ffmpeg.nim (2021)" do
+  software_li "ffmpeg.nim (2021)" false do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "Nim, FFmpeg"
@@ -125,7 +125,7 @@ ffmpeg_nim = do
 
 piledit :: forall m. Component m
 piledit = do
-  software_li "Piledit (2020 - 2021)" do
+  software_li "Piledit (2020 - 2021)" true do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "TypeScript, Vue, Electron, C#, FFmpeg"
@@ -141,7 +141,7 @@ piledit = do
 
 unit_lib :: forall m. Component m
 unit_lib = do
-  software_li "Unit (2020)" do
+  software_li "Unit (2020)" false do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "Nim"
@@ -154,7 +154,7 @@ unit_lib = do
 
 mifton :: forall m. Component m
 mifton = do
-  software_li "Mifton (2019)" do
+  software_li "Mifton (2019)" true do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "Ruby, Ruby on Rails"
