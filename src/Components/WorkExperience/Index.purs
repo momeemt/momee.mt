@@ -20,8 +20,6 @@ work_experience :: forall m. Component m
 work_experience = do
   JE.h2 ["class" := "text-2xl mt-4"] do
     text "就労経験"
-  JE.div ["class" := "text-slate-400 mt-2"] do
-    text "各項目はクリックして展開できます"
   JE.ul ["class" := "list-disc ml-4 mt-2"] do
     work_experience_li "LINEヤフー株式会社 インターンシップ (2024/09)" do
       JE.li'  do

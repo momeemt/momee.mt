@@ -12,8 +12,6 @@ software = do
   JE.div ["class" := "mt-4"] do
     JE.h2 ["class" := "text-2xl"] do
       text "ソフトウェア"
-    JE.div ["class" := "mt-2 text-slate-400"] do
-      text "各項目はクリックして展開できます"
     JE.ul ["class" := "list-disc pl-4"] do
       portfolio
       wascaml
