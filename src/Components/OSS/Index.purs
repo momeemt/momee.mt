@@ -11,7 +11,7 @@ oss_li :: forall m. String -> Component m -> Component m
 oss_li name comp = do
   JE.li ["class" := "mt-1"] do
     JE.details' do
-      JE.summary ["class" := "list-none"] do
+      JE.summary ["class" := "list-none cursor-pointer select-none"] do
         text name
       JE.ul ["class" := "list-disc ml-4"] do
         comp
