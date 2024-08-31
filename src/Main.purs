@@ -16,6 +16,7 @@ import Jelly.Hydrate (mount)
 import Jelly.Prop ((:=))
 import OSS (oss)
 import PastActivity (past_activity)
+import Qualification (qualification)
 import Scholarship (scholarship)
 import Software (software)
 import WorkExperience (work_experience)
@@ -81,5 +82,6 @@ mainComponent = do
         grants
         work_experience
         writing
+        qualification
         past_activity
 
