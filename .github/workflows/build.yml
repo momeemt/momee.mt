@@ -18,7 +18,7 @@ jobs:
         nix develop . --command bash -c "spago bundle-app -y -t ./public/index.js"
         nix develop . --command bash -c "tailwindcss -i ./src/index.css -o ./public/index.css"
     - run: ls -la public
-    - uses: peaceiris/actions-gh-pages@v3
+    - uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
