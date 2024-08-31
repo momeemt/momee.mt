@@ -51,6 +51,8 @@ mainComponent = do
   JE.main ["class" := "mt-8"] do
     JE.div ["class" := "w-100"] do
       JE.img ["src" := "./mutsuha_asada.png", "class" := "size-48 mx-auto object-contain"]
+    -- JE.div ["style" := "position: relative; width: 10px; height: 10px; background-color: white; top: -47px; left: 270px;"] do
+    --   on "click" \_ -> do
     JE.div ["class" := "text-center mt-2"] do
       JE.h1 ["class" := "text-3xl mt-4"] do
         text "浅田 睦葉"
@@ -59,7 +61,7 @@ mainComponent = do
       JE.div ["class" := "mt-3"] do
         text "コンパイラや型システム、ビルドシステムなどに興味があります"
     JE.div ["class" := "flex mt-10 justify-center"] do
-      JE.div ["class" := "px-10 flex flex-wrap gap-3 justify-center"] do
+      JE.div ["class" := "flex flex-wrap gap-x-2 gap-y-6 justify-center"] do
         external_media "Blog" "https://blog.momee.mt" "./blog.png" false
         external_media "GitHub" "https://github.com/momeemt" "./github.png" false
         external_media "Twitter" "https://x.com/mutsuha_asada" "./x.svg" false
