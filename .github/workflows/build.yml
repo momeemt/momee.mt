@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+    - run: |
+        nix develop . --command bash -c "spago bundle-app -y -t ./public/index.js"
+        nix develop . --command bash -c "tailwindcss -i ./src/index.css -o ./public/index.css"
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        destination_dir: .
+        keep_files: true
