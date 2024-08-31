@@ -1,4 +1,4 @@
-name: Build
+name: build and deploy
 
 on:
   push:
@@ -7,9 +7,7 @@ on:
     paths-ignore:
       - README.md
       - LICENSE*
-
-permissions:
-  contents: write
+  workflow_dispatch:
 
 jobs:
   build:
@@ -20,9 +18,25 @@ jobs:
     - run: |
         nix develop . --command bash -c "spago bundle-app -y -t ./public/index.js"
         nix develop . --command bash -c "tailwindcss -i ./src/index.css -o ./public/index.css"
-    - uses: peaceiris/actions-gh-pages@v4
+    - uses: actions/upload-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
-        destination_dir: .
-        keep_files: true
+        name: my_website
+        path: public
+    - uses: actions/upload-pages-artifact@v1
+      with:
+        path: public
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
