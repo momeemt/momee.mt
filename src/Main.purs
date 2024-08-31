@@ -62,7 +62,7 @@ mainComponent = do
       JE.div ["class" := "px-10 flex flex-wrap gap-3 justify-center"] do
         external_media "Blog" "https://blog.momee.mt" "./blog.png" false
         external_media "GitHub" "https://github.com/momeemt" "./github.png" false
-        external_media "Twitter" "https://x.com/momeemt" "./x.svg" false
+        external_media "Twitter" "https://x.com/mutsuha_asada" "./x.svg" false
         external_media "Cosense" "https://cosen.se/momeemt" "./cosense.svg" false
         external_media "Keybase" "https://keybase.io/momeemt" "./keybase.svg" false
         external_media "Zenn" "https://zenn.dev/momeemt" "./zenn.svg" false
