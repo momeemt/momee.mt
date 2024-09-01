@@ -36,9 +36,6 @@ writing = do
       JE.li' do
         external_link "https://www.word-ac.net/post/2023/1225-word54/" do
           text "PDF版のダウンロード"
-    writing_li "WORD 引越し準備号2023 (2023/03)" do
-      JE.li' do
-        text "『アパート暮らし』"
     writing_li "2023年度 筑波大学情報科学類 新歓パンフレット (2023/04)" do
       JE.li' do
         text "『連絡事項・今後の予定』、『履修について』、組版など"
@@ -50,6 +47,9 @@ writing = do
         external_link "https://github.com/uekann" do
           text "@uekann"
         text ", et al."
+    writing_li "WORD 引越し準備号2023 (2023/03)" do
+      JE.li' do
+        text "『アパート暮らし』"
     writing_li "メタプログラミングNim (2022/09)" do
       JE.li' do
         text "Nim言語のメタプログラミングに焦点を当てた技術同人誌"
