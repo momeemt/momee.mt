@@ -50,6 +50,12 @@ past_activity = do
         text ", "
         external_link "https://github.com/TakabayaP" do
           text "@TakabayaP"
+    past_activity_li "技術書典13 サークル参加 (2022/09)" do
+      JE.li' do
+        text "『メタプログラミングNim』 - momeemt"
+      JE.li' do
+        external_link "https://techbookfest.org/product/9MmhQfKjFRcRUFChKUqDLM?productVariantID=tMP44hVh3xbeKv8D8eLTqP" do
+          text "公式サイト"
     past_activity_li "SWEST24 講師 (2022/09)" do
       JE.li' do
         text "組み込みシステムの合宿方ワークショップでNim言語のセッションを担当させていただきました"
@@ -102,6 +108,16 @@ past_activity = do
         external_link "https://github.com/uchan-nos" do
           text "@uchan-nos"
         text ")"
+    past_activity_li "技術書典10 サークル参加 (2020/12 - 2021/01)" do
+      JE.li' do
+        text "『NimXD Book1』, 『NimXD Book2』 - momeemt"
+      JE.li' do
+        text "w/"
+        external_link "https://github.com/50m-regent" do
+          text "@50m-regent"
+      JE.li' do
+        external_link "https://techbookfest.org/organization/5762036657029120" do
+          text "あーるえむ サークルページ"
     past_activity_li "SecHack365 (2020/05 - 2021/02)" do
       JE.li' do
         external_link "https://sechack365.nict.go.jp/achievement/2020/pdf/2020_10.pdf" do
