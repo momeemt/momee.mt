@@ -13,9 +13,9 @@ software = do
     JE.h2 ["class" := "text-2xl"] do
       text "ソフトウェア"
     JE.ul ["class" := "list-disc pl-4"] do
-      portfolio
-      wascaml
       brack
+      wascaml
+      portfolio
       sohosai
       mock_up
       ffmpeg_nim
@@ -97,7 +97,7 @@ sohosai = do
 
 mock_up :: forall m. Component m
 mock_up = do
-  software_li "mock up (2021/03 - 2023/12)" true do
+  software_li "mock up (2021/03 - 2022/12)" true do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "Nim, FFmpeg, OpenGL, HLS, nginx"
