@@ -21,6 +21,12 @@ past_activity = do
   JE.h2 ["class" := "text-2xl mt-4"] do
     text "過去の活動"
   JE.ul ["class" := "list-disc ml-4 mt-2"] do
+    past_activity_li "オープンソースカンファレンス2024 Tokyo/Fall 出展 (2024/10)" do
+      JE.li' do
+        text "サイボウズ・ラボユースのブース内で、Brack言語の展示を行いました"
+      JE.li' do
+        external_link "https://event.ospn.jp/osc2024-fall/exhibit#:~:text=%E3%82%B5%E3%82%A4%E3%83%9C%E3%82%A6%E3%82%BA%E3%83%BB%E3%83%A9%E3%83%9C%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE,%E3%82%92%E8%A1%8C%E3%81%84%E3%81%BE%E3%81%99%E3%80%82" do
+          text "公式Webサイト"
     past_activity_li "セキュリティ・キャンプ全国大会2024 (2024/08)" do
       JE.li' do
         text "S09 サニタイザ自作ゼミ (講師: "
