@@ -36,13 +36,6 @@ past_activity = do
         external_link "https://github.com/jippo-m" do
           text "@jippo_m"
         text ")"
-    past_activity_li "筑波大学情報学群情報科学類 新入生歓迎委員会 (2022/12 - 2023/05)" do
-      JE.li' do
-        text "会計、パンフレット組版、新歓Web開発など"
-      JE.li' do
-        text "GitHub: "
-        external_link "https://github.com/hello-coins" do
-          text "@hello-coins"
     past_activity_li "技育CAMPハッカソン 最優秀賞 (2022/12)" do
       JE.li' do
         text "担当: フロントエンドのデザイン、ロゴ作成、スライド作成、発表"
@@ -80,9 +73,6 @@ past_activity = do
       JE.li' do
         external_link "https://wcce2022.org/" do
           text "公式サイト"
-    past_activity_li "学園祭実行委員会 情報メディアシステム局 (2022/06 - 2023/10)" do
-      JE.li' do
-        text "jsys22, jsys23 network"
     past_activity_li "技育展2021 最優秀賞 (2021/10)" do
       JE.li' do
         text "事業化目指してます部門 "

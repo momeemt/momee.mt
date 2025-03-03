@@ -19,6 +19,7 @@ import PastActivity (past_activity)
 import Qualification (qualification)
 import Scholarship (scholarship)
 import Software (software)
+import Volunteer (volunteer)
 import WorkExperience (work_experience)
 import Writing (writing)
 
@@ -81,6 +82,7 @@ mainComponent = do
         oss
         grants
         work_experience
+        volunteer
         writing
         qualification
         past_activity

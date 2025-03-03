@@ -77,7 +77,7 @@ brack = do
 
 sohosai :: forall m. Component m
 sohosai = do
-  software_li "Sohosai (2022/06 - 2023/10)" false do
+  software_li "Sohosai (2022/06 - 2023/10)" true do
     JE.ul ["class" := "list-disc pl-4"] do
       JE.li [] do
         text "Rust, Nix, Terraform, Sakura Cloud, Auth0, Roundcube"
