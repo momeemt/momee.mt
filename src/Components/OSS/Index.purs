@@ -24,7 +24,11 @@ oss = do
     oss_li "NixOS/nixpkgs (2024/05 - 現在)" do
       JE.li' do
         external_link "https://github.com/NixOS/nixpkgs/pulls?q=author%3Amomeemt+" do
-          text "36 PRs merged"
+          text "37 PRs merged"
       JE.li' do
         external_link "https://github.com/NixOS/nixpkgs/pulls?q=reviewed-by%3Amomeemt+-author%3Amomeemt" do
-          text "189 PRs reviewed"
+          text "266 PRs reviewed"
+    oss_li "NixOS/nix (2025/01)" do
+      JE.li' do
+        external_link "https://github.com/NixOS/nix/pulls?q=author%3Amomeemt+" do
+          text "1 PR merged"
