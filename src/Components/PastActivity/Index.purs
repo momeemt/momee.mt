@@ -21,6 +21,24 @@ past_activity = do
   JE.h2 ["class" := "text-2xl mt-4"] do
     text "過去の活動"
   JE.ul ["class" := "list-disc ml-4 mt-2"] do
+    past_activity_li "Nix meetup #3 登壇『❄️ tmux-nixの実装を通して学ぶNixOSモジュール』(2025/05)" do
+      JE.li' do
+        external_link "https://nix-ja.connpass.com/event/353532/" do
+          text "Nix meetup #3 大阪"
+        text " / "
+        external_link "https://speakerdeck.com/momeemt/tmux-nixnoshi-zhuang-wotong-sitexue-bunixosmoziyuru" do
+          text "スライド"
+      JE.li' do
+        text "ターミナルマルチプレクサのtmuxの設定をNixで記述するためのNixOSモジュールの実装について説明しました"
+    past_activity_li "Nix meetup #2 登壇『❄️ NixOS/nixpkgsにSATySFiサポートを実装する』(2025/03)" do
+      JE.li' do
+        external_link "https://nix-ja.connpass.com/event/342908/" do
+          text "Nix meetup #2"
+        text " / "
+        external_link "https://speakerdeck.com/momeemt/nixpkgsni-satysfisapotowoshi-zhuang-suru" do
+          text "スライド"
+      JE.li' do
+        text "組版システムであるSATySFiのパッケージのNixビルドサポートの比較と実装について説明しました"
     past_activity_li "オープンソースカンファレンス2024 Tokyo/Fall 出展 (2024/10)" do
       JE.li' do
         text "サイボウズ・ラボユースのブース内で、Brack言語の展示を行いました"

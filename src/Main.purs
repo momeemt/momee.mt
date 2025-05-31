@@ -61,7 +61,7 @@ mainComponent = do
       JE.div [] do
         text "Mutsuha Asada"
       JE.div ["class" := "mt-3"] do
-        text "コンパイラや型システム、ビルドシステムなどに興味があります"
+        text "コンパイラやサニタイザ、ビルドシステムなどに興味があります"
     JE.div ["class" := "flex mt-10 justify-center"] do
       JE.div ["class" := "flex flex-wrap gap-x-2 gap-y-6 justify-center"] do
         external_media "Blog" "https://blog.momee.mt" "./blog.png" false
