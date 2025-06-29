@@ -13,6 +13,7 @@ software = do
     JE.h2 ["class" := "text-2xl"] do
       text "ソフトウェア"
     JE.ul ["class" := "list-disc pl-4"] do
+      tmux_nix
       brack
       wascaml
       portfolio
@@ -34,6 +35,19 @@ software_li name archived comp = do
             text "Archived"
           else text ""
       comp
+
+tmux_nix :: forall m. Component m
+tmux_nix = do
+  software_li "tmux-nix (2025/05 - 現在)" false do
+    JE.ul ["class" := "list-disc pl-4"] do
+      JE.li [] do
+        text "Nix, tmux"
+      JE.li [] do
+        text "tmux.confレスに設定を行うためのNixOSモジュール"
+      JE.li [] do
+        text "GitHub: "
+        external_link "https://github.com/momeemt/tmux-nix" do
+          text "momeemt/tmux-nix"
 
 wascaml :: forall m. Component m
 wascaml = do

@@ -28,7 +28,7 @@ educational = do
         external_link "https://syssec.cs.tsukuba.ac.jp/wp/" do
           text "システムセキュリティ研究室 所属 (2025/04 - 現在)"
       JE.li' do
-        text "成績: 3.95 / 4.3 (3年次終了時, 145単位修得)"
+        text "成績: 3.95 / 4.3 (3年次終了時, 146単位修得)"
     educational_li "都立桜修館中等教育学校 (2016/04 - 2022/03)" do
       JE.li' do
         text "11期"

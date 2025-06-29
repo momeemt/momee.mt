@@ -3,7 +3,7 @@ module Volunteer where
 import Prelude
 
 import ExternalLink (external_link)
-import Jelly.Component (Component, text)
+import Jelly.Component (Component, doctype, text)
 import Jelly.Element as JE
 import Jelly.Prop ((:=))
 
@@ -21,6 +21,11 @@ volunteer = do
   JE.h2 ["class" := "text-2xl mt-4"] do
     text "ボランティア"
   JE.ul ["class" := "list-disc ml-4 mt-2"] do
+    volunteer_li "筑波大学情報学群情報科学類 オープンキャンパス 学生スタッフ (2022, 2025)" do
+      JE.li' do
+        text "企画セッション・座談会（2025）"
+      JE.li' do
+        text "受験生からの質疑応答（2022）"
     volunteer_li "情報科学若手の会 幹事 (2024/12 - 現在)" do
       JE.li' do
         external_link "https://wakate.org/" do
